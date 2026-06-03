@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@theme inline {
+  --rb-red: #E21B4D;
+  --rb-yellow: #FFD300;
+  --rb-light: #F4EBEE;
+  --rb-gray: #D9D4CE;
+  --rb-blue: #1D19AC;
+  --font-heading: "Leo Sans", "Inter", sans-serif;
+  --font-body: "Canva Sans", "Inter", sans-serif;
+  --font-sans: var(--font-body);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Only hide cursor on fine-pointer devices (desktops) — touch keeps default */
+@media (pointer: fine) {
+  body, a, button, input, textarea, select, .sm-scope * {
+    cursor: none !important;
+  }
+}
+
+body {
+  background: #0a0a0a;
+  color: #fff;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(226, 27, 77, 0.4);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 1px solid var(--rb-red);
+  outline-offset: 4px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Screen reader only — for skip-to-content link */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only:focus,
+.sr-only.focus\:not-sr-only:focus {
+  position: fixed;
+  width: auto;
+  height: auto;
+  padding: 0.75rem 1.5rem;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* Reduced motion: disable all CSS animations and transitions */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .rb-can-inner {
+    animation: none !important;
+  }
+
+  .rb-can-glow {
+    animation: none !important;
+  }
+}
+
+/* Red Bull can floating animation */
+@keyframes canFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes canGlow {
+  0%, 100% { opacity: 0.25; transform: scale(1); }
+  50% { opacity: 0.55; transform: scale(1.08); }
+}
+
+.rb-can-inner {
+  position: relative;
+  animation: canFloat 5s ease-in-out infinite;
+  transform-style: preserve-3d;
+  perspective: 800px;
+}
+
+.rb-can-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140%;
+  height: 140%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(ellipse at center, rgba(226, 27, 77, 0.25) 0%, rgba(255, 211, 0, 0.08) 40%, transparent 70%);
+  filter: blur(50px);
+  animation: canGlow 5s ease-in-out infinite;
+  pointer-events: none;
+}
