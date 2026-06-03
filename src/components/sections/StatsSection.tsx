@@ -9,7 +9,7 @@ export default function StatsSection() {
   return (
     <section
       id="stats"
-      className="scroll-section absolute inset-0 flex items-center pl-[clamp(60px,8vw,160px)]"
+      className="scroll-section absolute inset-0 flex items-center justify-end pr-[clamp(60px,8vw,160px)]"
       style={{ opacity: 0 }}
       role="region"
       aria-label="Nutrition facts"

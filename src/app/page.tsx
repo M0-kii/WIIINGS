@@ -69,14 +69,14 @@ const MODEL_KEYFRAMES = [
   // Wiiings — text RIGHT → can LEFT
   { at: 0.31, x: -28, y: 6,   rot: 4,    scale: 0.97 },
   { at: 0.44, x: -28, y: 6,   rot: 4,    scale: 0.97 },
-  // Stats — text LEFT → can RIGHT
-  { at: 0.5,  x: 28,  y: -12, rot: -2,   scale: 1.04 },
-  { at: 0.62, x: 28,  y: -12, rot: -2,   scale: 1.04 },
+  // Stats — text RIGHT → can LEFT
+  { at: 0.5,  x: -28, y: -12, rot: -2,   scale: 1.04 },
+  { at: 0.62, x: -28, y: -12, rot: -2,   scale: 1.04 },
   // Heritage — text LEFT → can RIGHT
   { at: 0.68, x: 26,  y: 4,   rot: 3,    scale: 0.98 },
   { at: 0.8,  x: 26,  y: 4,   rot: 3,    scale: 0.98 },
-  // Fuel — text RIGHT → can LEFT
-  { at: 0.86, x: -22, y: -6,  rot: -1.5, scale: 1.01 },
+  // Fuel — text LEFT → can RIGHT
+  { at: 0.86, x: 22, y: -6,  rot: -1.5, scale: 1.01 },
   // CTA + Author — center
   { at: 0.93, x: 0,   y: 0,   rot: 0,    scale: 1.0  },
   { at: 1.0,  x: 0,   y: 0,   rot: 0,    scale: 1.0  },
@@ -408,7 +408,7 @@ export default function Home() {
 
             <div className="fixed inset-0 z-[4] pointer-events-none bg-[radial-gradient(ellipse_at_center,transparent_20%,rgba(0,0,0,0.7)_100%)]" />
 
-            <div className="fixed inset-0 z-10 pointer-events-none">
+            <div className="fixed inset-0 z-[16] pointer-events-none">
               <HeroSection />
               <CaffeineSection />
               <WiiingsSection />

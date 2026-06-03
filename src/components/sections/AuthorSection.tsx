@@ -31,7 +31,7 @@ export default function AuthorSection() {
           href="https://github.com/M0-Kii"
           target="_blank"
           rel="noopener noreferrer"
-          className="rv group inline-flex flex-col items-center"
+          className="rv group inline-flex flex-col items-center pointer-events-auto cursor-pointer"
           style={{ opacity: 0, transform: "translateY(30px)" }}
         >
           <span className="font-['var(--font-heading)'] font-black tracking-[-0.03em] text-white/80 group-hover:text-[var(--rb-red)] transition-colors duration-500 text-[clamp(48px,7vw,96px)]">
@@ -49,7 +49,7 @@ export default function AuthorSection() {
             href="https://github.com/M0-Kii"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[clamp(13px,1.4vw,18px)] tracking-[0.4em] uppercase text-white/15 hover:text-white/40 transition-colors duration-300 font-['var(--font-body)'] font-light"
+            className="text-[clamp(13px,1.4vw,18px)] tracking-[0.4em] uppercase text-white/15 hover:text-white/40 transition-colors duration-300 font-['var(--font-body)'] font-light pointer-events-auto cursor-pointer"
           >
             github.com/M0-Kii
           </a>
