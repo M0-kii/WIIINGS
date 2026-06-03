@@ -60,23 +60,23 @@ const SECTION_IDS = [
 ] as const;
 
 const MODEL_KEYFRAMES = [
-  // Hero — text LEFT → can RIGHT
-  { at: 0.0,  x: 25,  y: 0,   rot: 0,    scale: 1.0  },
-  { at: 0.06, x: 25,  y: 0,   rot: 0,    scale: 1.0  },
-  // Caffeine — text RIGHT → can LEFT
-  { at: 0.13, x: -25, y: -8,  rot: -3,   scale: 1.02 },
-  { at: 0.24, x: -25, y: -8,  rot: -3,   scale: 1.02 },
-  // Wiiings — text RIGHT → can LEFT
-  { at: 0.31, x: -28, y: 6,   rot: 4,    scale: 0.97 },
-  { at: 0.44, x: -28, y: 6,   rot: 4,    scale: 0.97 },
-  // Stats — text RIGHT → can LEFT
-  { at: 0.5,  x: -28, y: -12, rot: -2,   scale: 1.04 },
-  { at: 0.62, x: -28, y: -12, rot: -2,   scale: 1.04 },
-  // Heritage — text LEFT → can RIGHT
-  { at: 0.68, x: 26,  y: 4,   rot: 3,    scale: 0.98 },
-  { at: 0.8,  x: 26,  y: 4,   rot: 3,    scale: 0.98 },
-  // Fuel — text LEFT → can RIGHT
-  { at: 0.86, x: 22, y: -6,  rot: -1.5, scale: 1.01 },
+  // Hero — text LEFT → can RIGHT (far edge)
+  { at: 0.0,  x: 38,  y: 0,   rot: 0,    scale: 1.0  },
+  { at: 0.06, x: 38,  y: 0,   rot: 0,    scale: 1.0  },
+  // Caffeine — text RIGHT → can LEFT (far edge)
+  { at: 0.13, x: -38, y: -8,  rot: -3,   scale: 1.02 },
+  { at: 0.24, x: -38, y: -8,  rot: -3,   scale: 1.02 },
+  // Wiiings — text RIGHT → can LEFT (far edge)
+  { at: 0.31, x: -40, y: 6,   rot: 4,    scale: 0.97 },
+  { at: 0.44, x: -40, y: 6,   rot: 4,    scale: 0.97 },
+  // Stats — text LEFT → can RIGHT (far edge)
+  { at: 0.5,  x: 38,  y: -12, rot: -2,   scale: 1.04 },
+  { at: 0.62, x: 38,  y: -12, rot: -2,   scale: 1.04 },
+  // Heritage — text LEFT → can RIGHT (far edge)
+  { at: 0.68, x: 38,  y: 4,   rot: 3,    scale: 0.98 },
+  { at: 0.8,  x: 38,  y: 4,   rot: 3,    scale: 0.98 },
+  // Fuel — text LEFT → can RIGHT (far edge)
+  { at: 0.86, x: 36,  y: -6,  rot: -1.5, scale: 1.01 },
   // CTA + Author — center
   { at: 0.93, x: 0,   y: 0,   rot: 0,    scale: 1.0  },
   { at: 1.0,  x: 0,   y: 0,   rot: 0,    scale: 1.0  },

@@ -9,7 +9,7 @@ export default function StatsSection() {
   return (
     <section
       id="stats"
-      className="scroll-section absolute inset-0 flex items-center justify-end pr-[clamp(60px,8vw,160px)]"
+      className="scroll-section absolute inset-0 flex items-center justify-start pl-[clamp(60px,8vw,160px)]"
       style={{ opacity: 0 }}
       role="region"
       aria-label="Nutrition facts"
@@ -46,7 +46,7 @@ export default function StatsSection() {
                   {stat.unit}
                 </span>
               </span>
-              <span className="text-[clamp(14px,1.5vw,20px)] tracking-[0.35em] uppercase text-white/30 mt-4 font-['var(--font-body)'] font-semibold">
+              <span className="text-[clamp(14px,1.5vw,20px)] tracking-[0.35em] uppercase text-white/30 mt-4 font-['var(--font-body)'] font-semibold text-left">
                 {stat.label}
               </span>
             </div>
