@@ -41,7 +41,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   displayItemNumbering = true,
   className,
   logoUrl = "/redbull.svg",
-  menuButtonColor = "#fff",
+  menuButtonColor = "#FFD300",
   openMenuButtonColor = "#fff",
   changeMenuColorOnOpen = true,
   accentColor = "#E21B4D",
@@ -546,7 +546,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 
           <button
             ref={toggleBtnRef}
-            className={`sm-toggle relative inline-flex items-center gap-[0.3rem] bg-transparent border-0 cursor-pointer font-medium leading-none overflow-visible pointer-events-auto ${
+            className={`sm-toggle relative inline-flex items-center gap-[0.4rem] bg-transparent border-0 cursor-pointer font-medium leading-none overflow-visible pointer-events-auto py-3 px-4 ${
               open ? "text-black" : "text-[#e9e9ef]"
             }`}
             aria-label={open ? "Close menu" : "Open menu"}
@@ -562,7 +562,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
             >
               <span
                 ref={textInnerRef}
-                className="sm-toggle-textInner flex flex-col leading-none"
+                className="sm-toggle-textInner flex flex-col leading-none text-[clamp(14px,1.6vw,18px)]"
               >
                 {textLines.map((l, i) => (
                   <span
@@ -577,16 +577,16 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 
             <span
               ref={iconRef}
-              className="sm-icon relative w-[14px] h-[14px] shrink-0 inline-flex items-center justify-center [will-change:transform]"
+              className="sm-icon relative w-[clamp(22px,2.5vw,32px)] h-[clamp(22px,2.5vw,32px)] shrink-0 inline-flex items-center justify-center [will-change:transform]"
               aria-hidden="true"
             >
               <span
                 ref={plusHRef}
-                className="sm-icon-line absolute left-1/2 top-1/2 w-full h-[2px] bg-current rounded-[2px] -translate-x-1/2 -translate-y-1/2 [will-change:transform]"
+                className="sm-icon-line absolute left-1/2 top-1/2 w-full h-[3px] bg-current rounded-[2px] -translate-x-1/2 -translate-y-1/2 [will-change:transform]"
               />
               <span
                 ref={plusVRef}
-                className="sm-icon-line sm-icon-line-v absolute left-1/2 top-1/2 w-full h-[2px] bg-current rounded-[2px] -translate-x-1/2 -translate-y-1/2 [will-change:transform]"
+                className="sm-icon-line sm-icon-line-v absolute left-1/2 top-1/2 w-full h-[3px] bg-current rounded-[2px] -translate-x-1/2 -translate-y-1/2 [will-change:transform]"
               />
             </span>
           </button>

@@ -66,12 +66,12 @@ const MODEL_KEYFRAMES = [
   // Caffeine — text RIGHT → can LEFT (far edge)
   { at: 0.13, x: -38, y: -8,  rot: -3,   scale: 1.02 },
   { at: 0.24, x: -38, y: -8,  rot: -3,   scale: 1.02 },
-  // Wiiings — text RIGHT → can LEFT (far edge)
-  { at: 0.31, x: -40, y: 6,   rot: 4,    scale: 0.97 },
-  { at: 0.44, x: -40, y: 6,   rot: 4,    scale: 0.97 },
-  // Stats — text LEFT → can RIGHT (far edge)
-  { at: 0.5,  x: 38,  y: -12, rot: -2,   scale: 1.04 },
-  { at: 0.62, x: 38,  y: -12, rot: -2,   scale: 1.04 },
+  // Wiiings — text RIGHT → can LEFT (far edge, lower to avoid text)
+  { at: 0.31, x: -40, y: 18,   rot: 4,    scale: 0.97 },
+  { at: 0.44, x: -40, y: 18,   rot: 4,    scale: 0.97 },
+  // Stats — text RIGHT → can LEFT (far edge)
+  { at: 0.5,  x: -38, y: -12, rot: -2,   scale: 1.04 },
+  { at: 0.62, x: -38, y: -12, rot: -2,   scale: 1.04 },
   // Heritage — text LEFT → can RIGHT (far edge)
   { at: 0.68, x: 38,  y: 4,   rot: 3,    scale: 0.98 },
   { at: 0.8,  x: 38,  y: 4,   rot: 3,    scale: 0.98 },
@@ -330,7 +330,7 @@ export default function Home() {
             colors={["#0a0505", "#1a0808", "#120606"]}
             accentColor="#E21B4D"
             logoUrl="/redbull.svg"
-            menuButtonColor="#ffffff"
+            menuButtonColor="#FFD300"
             openMenuButtonColor="#E21B4D"
             items={SECTION_IDS.slice(0, 6).map((id) => ({
               label: id.charAt(0).toUpperCase() + id.slice(1),

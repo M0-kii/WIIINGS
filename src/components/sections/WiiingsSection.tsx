@@ -2,7 +2,7 @@ export default function WiiingsSection() {
   return (
     <section
       id="wiiings"
-      className="scroll-section absolute inset-0 flex items-center justify-end pr-[clamp(60px,8vw,140px)]"
+      className="scroll-section absolute inset-0 flex items-start justify-end pr-[clamp(60px,8vw,140px)] pt-[clamp(100px,14vh,200px)]"
       style={{ opacity: 0 }}
       role="region"
       aria-label="Wiiings performance"

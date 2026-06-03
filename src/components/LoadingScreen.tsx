@@ -29,37 +29,30 @@ export default function LoadingScreen({ onReady }: { onReady: () => void }) {
   if (done) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] overflow-hidden bg-[#0a0a0a] flex items-center justify-center">
-      {/* Two triangles side by side — Red Bull motif */}
-      <div className="relative flex items-center justify-center gap-[clamp(8px,2vw,24px)]">
-        {/* Left triangle — red */}
-        <div
-          className="transition-all duration-500 ease-[cubic-bezier(0.76,0,0.24,1)]"
-          style={{
-            width: 0,
-            height: 0,
-            borderLeft: "clamp(40px,7vw,80px) solid transparent",
-            borderRight: "clamp(40px,7vw,80px) solid transparent",
-            borderBottom: "clamp(70px,12vw,140px) solid #E21B4D",
-            transform: splitting ? "translateX(-120vw) rotate(-15deg)" : "translateX(0) rotate(0deg)",
-            opacity: splitting ? 0 : 1,
-          }}
-        />
+    <div className="fixed inset-0 z-[100] overflow-hidden bg-[#0a0a0a]">
+      {/* Left half — red triangle filling the screen */}
+      <div
+        className="absolute top-0 left-0 h-full transition-all duration-700 ease-[cubic-bezier(0.76,0,0.24,1)]"
+        style={{
+          width: "50%",
+          background: "#E21B4D",
+          clipPath: "polygon(0 0, 100% 0, 60% 100%, 0 100%)",
+          transform: splitting ? "translateX(-110%) skewX(8deg)" : "translateX(0) skewX(0deg)",
+          opacity: splitting ? 0 : 1,
+        }}
+      />
 
-        {/* Right triangle — yellow */}
-        <div
-          className="transition-all duration-500 ease-[cubic-bezier(0.76,0,0.24,1)]"
-          style={{
-            width: 0,
-            height: 0,
-            borderLeft: "clamp(40px,7vw,80px) solid transparent",
-            borderRight: "clamp(40px,7vw,80px) solid transparent",
-            borderBottom: "clamp(70px,12vw,140px) solid #FFD300",
-            transform: splitting ? "translateX(120vw) rotate(15deg)" : "translateX(0) rotate(0deg)",
-            opacity: splitting ? 0 : 1,
-          }}
-        />
-      </div>
+      {/* Right half — yellow triangle filling the screen */}
+      <div
+        className="absolute top-0 right-0 h-full transition-all duration-700 ease-[cubic-bezier(0.76,0,0.24,1)]"
+        style={{
+          width: "50%",
+          background: "#FFD300",
+          clipPath: "polygon(40% 0, 100% 0, 100% 100%, 0 100%)",
+          transform: splitting ? "translateX(110%) skewX(-8deg)" : "translateX(0) skewX(0deg)",
+          opacity: splitting ? 0 : 1,
+        }}
+      />
 
       {/* Center content — logo + progress (overlaid on top) */}
       <div className="absolute inset-0 flex flex-col items-center justify-center z-10">

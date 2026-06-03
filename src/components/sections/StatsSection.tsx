@@ -9,12 +9,12 @@ export default function StatsSection() {
   return (
     <section
       id="stats"
-      className="scroll-section absolute inset-0 flex items-center justify-start pl-[clamp(60px,8vw,160px)]"
+      className="scroll-section absolute inset-0 flex items-center justify-end pr-[clamp(60px,8vw,160px)]"
       style={{ opacity: 0 }}
       role="region"
       aria-label="Nutrition facts"
     >
-      <div>
+      <div className="text-right">
         {/* Eyebrow */}
         <p
           className="rv text-[clamp(14px,1.6vw,20px)] tracking-[0.5em] uppercase text-[var(--rb-yellow)] mb-12 font-['var(--font-body)'] font-semibold"
